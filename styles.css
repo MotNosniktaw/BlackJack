@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.result {
+    font-size: 2.5rem;
+    padding: 10px;
+}
+
+.container {
+    border: 1px solid red;
+    background: darkgreen;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.board-container{
+    overflow: auto;
+}
+
+.player-container {
+    border: 1px solid gray;
+    background: green;
+    width: 45%;
+    float: left;
+    margin: 0 2.5%;
+    overflow: auto;
+}
+
+.hand-container {
+    border: 1px solid orange;
+    background: purple;
+    height: 300px;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bust {
+    position: absolute;
+    top: 90px;
+    left: 75px;
+    border: 4px solid red;
+    color: red;
+    font-size: 6rem;
+    transform: rotate(-30deg);
+    display: none;
+}
+
+.bust[class*="22"] {
+    display: block;
+}
+
+.blackjack {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    border: 4px solid gold;
+    color: gold;
+    font-size: 5rem;
+    text-shadow: 5px 2px black;
+    display: none;
+}
+
+.blackjack > img {
+    position: absolute;
+    top: -150px;
+    left: 150px;
+    height: 200px;
+}
+
+.blackjack[class*="21"] {
+    display: block;
+}
+
+.card {
+    border: 1px solid black;
+    background: white;
+    float: left;
+    height: 288px;
+    width: 45%;
+    margin: 5px 2.5%;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card::after {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 120%;
+    transform: rotate(180deg);
+}
+
+.card:before {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 120%;
+}
+
+.card span {
+    font-size: 6rem;
+}
+
+.card[class*="Hearts"],
+.card[class*="Diamonds"] {
+    color: red;
+}
+
+.card[class*="Clubs"],
+.card[class*="Spades"] {
+    color: black;
+}
+
+.card[class*="Hearts"]:before,
+.card[class*="Hearts"]:after {
+    content: "♥";
+}
+
+.card[class*="Diamonds"]:before,
+.card[class*="Diamonds"]:after {
+    content: "♦";
+}
+
+.card[class*="Clubs"]:before,
+.card[class*="Clubs"]:after {
+    content: "♣";
+}
+
+.card[class*="Spades"]:before,
+.card[class*="Spades"]:after {
+    content: "♠";
+}
+
+.card[class*="Ace"] span:before {
+    content: "A";
+}
+
+.card[class*="King"] span:before {
+    content: "K";
+}
+
+.card[class*="Queen"] span:before {
+    content: "Q";
+}
+
+.card[class*="Jack"] span:before {
+    content: "J";
+}
+
+.card[class*="10"] span:before {
+    content: "10";
+}
+
+.card[class*="9"] span:before {
+    content: "9";
+}
+
+.card[class*="8"] span:before {
+    content: "8";
+}
+
+.card[class*="7"] span:before {
+    content: "7";
+}
+
+.card[class*="6"] span:before {
+    content: "6";
+}
+
+.card[class*="5"] span:before {
+    content: "5";
+}
+
+.card[class*="4"] span:before {
+    content: "4";
+}
+
+.card[class*="3"] span:before {
+    content: "3";
+}
+
+.card[class*="2"] span:before {
+    content: "2";
+}
